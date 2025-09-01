@@ -108,7 +108,5 @@ const PlaceOrder = () => {
     </form>
   )
 }
-import './PlaceOrder.css'
-import { StoreContext } from '../../context/StoreContext';
 
 export default PlaceOrder
