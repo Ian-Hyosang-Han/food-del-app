@@ -44,11 +44,11 @@
     margin: 10px 0px;
 }
 
-.food-itme-img-container{
+.food-item-img-container{
     position: relative;
 }
 
-.food-itme-img-container .add{
+.food-item-img-container .add{
     width: 35px;
     position: absolute;
     bottom: 15px;
