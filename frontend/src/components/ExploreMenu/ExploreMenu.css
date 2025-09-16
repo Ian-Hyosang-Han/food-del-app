@@ -10,7 +10,7 @@
 }
 
 .explore-menu-text{
-    max-width: 60%;
+    max-width: 70%;
     color: #808080;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .explore-menu-list-item .active{
-    border: 4px solid tomato;
+    border: 4px solid #FFBF00;
     padding: 2px;
 }
 

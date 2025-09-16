@@ -1,4 +1,200 @@
+:root { --navbar-height: 88px; }
+@media (min-width: 768px) { :root { --navbar-height: 96px; } }
+
+body { padding-top: var(--navbar-height); }
+
 .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 30px;
+    background: transparent;
+
+    transition: background-color .5s ease, padding .5s ease,
+                box-shadow .5s ease, backdrop-filter .5s ease, color .2s ease;
+}
+
+@media (min-width: 768px) {  /* md */
+  .navbar { padding-left: 64px; padding-right: 64px; }
+}
+@media (min-width: 1024px) { /* lg */
+  .navbar { padding-left: 96px; padding-right: 96px; }
+}
+@media (min-width: 1280px) { /* xl */
+  .navbar { padding-left: 128px; padding-right: 128px; }
+}
+
+.navbar--scrolled {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    color: #374151;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+@media (min-width: 768px) {
+  .navbar--scrolled {
+    padding-top: 16px;  /* md */
+    padding-bottom: 16px;
+  }
+}
+
+.navbar .logo{
+    font-family: "Lobster Two", sans-serif;
+    width: 250px;
+    margin: 0;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: black;
+    font-size: 18px;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: #FFBF00;
+    font-size: 15px;
+    color: white;
+    border: 1px solid #FFBF00;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color: #FFBF00;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+
+.navbar-menu a, .navbar-menu a:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #FFBF00;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile{
+    position: relative;
+}
+
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1100;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #FFBF00;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover{
+    color: #FFBF00;
+}
+
+@media (max-width:1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px) {
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px) {
+    .navbar-menu{
+        display: none;
+    }
+}
+
+/* .navbar{
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
@@ -6,14 +202,15 @@
 }
 
 .navbar .logo{
-    width: 150px;
+    font-family: "Lobster Two", sans-serif;
+    width: 250px;
 }
 
 .navbar-menu{
     display: flex;
     list-style: none;
     gap: 20px;
-    color: #49557e;
+    color: black;
     font-size: 18px;
 }
 
@@ -142,4 +339,4 @@
     .navbar-menu{
         display: none;
     }
-}
+} */

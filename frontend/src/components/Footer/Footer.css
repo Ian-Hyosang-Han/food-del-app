@@ -6,7 +6,7 @@
     align-items: center;
     gap: 20px;
     padding: 20px 8vw;
-    padding-top: 80px;
+    padding-top: 50px;
     margin-top: 100px;
 }
 
@@ -15,6 +15,12 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 80px;
+}
+
+.footer-content-left .logo{
+    font-family: "Lobster Two", sans-serif;
+    width: 250px;
+    margin: 0;
 }
 
 .footer-content-left, .footer-content-right, .footer-content-center{
