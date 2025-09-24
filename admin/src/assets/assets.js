@@ -6,6 +6,7 @@ import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.png'
 
 export const url = 'https://food-del-backend-86ni.onrender.com'
+
 export const assets ={
     logo,
     add_icon,
@@ -14,7 +15,3 @@ export const assets ={
     upload_area,
     parcel_icon
 }
-
-
-export const url = "https://food-del-backend-86ni.onrender.com"
-
